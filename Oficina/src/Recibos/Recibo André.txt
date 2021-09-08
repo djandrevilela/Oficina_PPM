@@ -1,0 +1,6 @@
+Cliente: André
+Contribuinte: 123456789
+Modelo: Dacia
+Ano: 2020
+ Tipo de Avaria: MOTOR
+ Tempo demorado: 5.0

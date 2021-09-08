@@ -1,0 +1,6 @@
+Cliente: Mariana
+Contribuinte: 123456789
+Modelo: BMW
+Ano: 1998
+Tipo de Avaria: MOTORESELETRICOS
+Tempo demorado: 3.0

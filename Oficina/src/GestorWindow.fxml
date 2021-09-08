@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="761.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestorWindowController">
+   <children>
+      <ListView fx:id="carListView" editable="true" layoutX="160.0" layoutY="55.0" prefHeight="603.0" prefWidth="237.0" />
+      <Button fx:id="verCarros" layoutX="23.0" layoutY="75.0" mnemonicParsing="false" onMouseClicked="#checkCarList" prefHeight="33.0" prefWidth="113.0" text="Ver Carros" />
+      <ListView fx:id="mecListView" layoutX="416.0" layoutY="55.0" onMouseClicked="#showCarsToFix" prefHeight="204.0" prefWidth="237.0" />
+      <Button fx:id="verMecanicos" layoutX="23.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#checkMecList" prefHeight="33.0" prefWidth="113.0" text="Ver Mecânicos" />
+      <Label layoutX="190.0" layoutY="14.0" text="Carros em Espera">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="14.0" text="Mecânicos">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <ListView fx:id="carrosPorArranjar" layoutX="371.0" layoutY="312.0" prefHeight="74.0" prefWidth="200.0" visible="false" />
+      <Label layoutX="371.0" layoutY="283.0" text="Carros Por Arranjar" visible="false">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="carrosPorArranjarLabel" layoutX="415.0" layoutY="264.0" prefHeight="59.0" prefWidth="240.0" text="Carros Por Arranjar do Mecânico Selecionado" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView fx:id="carrosPorArranjarListView" editable="true" layoutX="415.0" layoutY="323.0" onMouseClicked="#carrosPorArranjarListView" prefHeight="192.0" prefWidth="237.0" />
+      <Button fx:id="gerirEspecializacao" layoutX="23.0" layoutY="662.0" mnemonicParsing="false" onMouseClicked="#atribuirEspecializacao" prefHeight="81.0" prefWidth="113.0" text="Gerir Carros por Especialização para Todos os Mecânicos" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="addCarPriority" layoutX="23.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#AddCarPriority" prefHeight="59.0" prefWidth="113.0" text="Adicionar Carro ao Mecânico - Com Prioridade" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="addCar" layoutX="23.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#AddCar" prefHeight="59.0" prefWidth="113.0" text="Adicionar Carro ao Mecânico - Sem Prioridade" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="errorLabel" layoutX="160.0" layoutY="664.0" prefHeight="81.0" prefWidth="310.0" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="sortMenor" layoutX="23.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#sortMenor" prefHeight="59.0" prefWidth="113.0" text="Organizar por Tempo Restante Mais Curto" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="sortMaior" layoutX="23.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#sortMaior" prefHeight="59.0" prefWidth="113.0" text="Organizar por Tempo Restante Mais Longo" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="gerCar" layoutX="23.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#gerCar" prefHeight="46.0" prefWidth="113.0" text="Gerir Todos os Carros" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="passarSlot" layoutX="23.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#PassarSlot" prefHeight="33.0" prefWidth="113.0" text="Passar Slot" />
+      <TextField fx:id="nome" layoutX="503.0" layoutY="525.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="423.0" layoutY="529.0" text="Nome" />
+      <Label layoutX="423.0" layoutY="568.0" text="Especialização" />
+      <TextField fx:id="salario" layoutX="503.0" layoutY="603.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="423.0" layoutY="607.0" text="Salário" />
+      <Button fx:id="addMec" layoutX="503.0" layoutY="649.0" mnemonicParsing="false" onMouseClicked="#AddMec" prefHeight="33.0" prefWidth="150.0" text="Adicionar Mecânico" />
+      <Button fx:id="rvMec" layoutX="503.0" layoutY="691.0" mnemonicParsing="false" onMouseClicked="#RemMec" prefHeight="33.0" prefWidth="150.0" text="Remover Mecânico" />
+      <Button fx:id="clean" layoutX="23.0" layoutY="598.0" mnemonicParsing="false" onMouseClicked="#CleanList" prefHeight="46.0" prefWidth="113.0" text="Limpar Lista do Mecânico" textAlignment="CENTER" wrapText="true" />
+      <ChoiceBox fx:id="especializacao" layoutX="503.0" layoutY="564.0" prefWidth="150.0" value="">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value= "ENGELETRICO" />
+               <String fx:value= "BATECHAPAS" />
+               <String fx:value= "PINTOR" />
+               <String fx:value= "ENGAUTOMOVEL" />
+               <String fx:value= "ESTOFADOR" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+   </children>
+</AnchorPane>
